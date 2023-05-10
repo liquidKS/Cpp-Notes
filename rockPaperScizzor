@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main (){
+    string playerOne;
+    string playerTwo;
+    string rock;
+    string paper;
+    string scizzors;
+
+    //get input
+    cout << "rock paper or scizzor Player 1: ";
+    getline(cin, playerOne);
+    cout << "rock paper or scizzor Player 2: ";
+    getline(cin , playerTwo);
+
+    //calculate output
+    if (playerOne == playerTwo){
+        cout << "TIE GAME";
+    }
+    //every scenerio playerOne can win
+    else if((playerOne == "rock" && playerTwo == "scizzors") || (playerOne == "scizzors" && playerTwo == "paper") || (playerOne == "paper" && playerTwo == "rock")){
+        cout << "PlayerOne Wins \nPlayerTwo Loses";
+    }
+    //every scenerio playerTwo can win
+    else if ((playerOne == "rock" && playerTwo == "paper") || (playerOne == "scizzors" && playerTwo == "rock") || (playerOne == "paper" && playerTwo == "scizzors")){
+        cout << "PlayerTwo Wins \nPlayerOne Loses";
+    }
+    else{
+        return 0;
+    }
+
+    return 0;
+}
