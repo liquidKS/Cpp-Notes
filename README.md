@@ -1,3 +1,3 @@
 # Cpp-Notes
 
-little projects from learning C++
+little projects from learning C++.
